@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { Link } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='bg-gray-200 h-screen'>
+    <div className=" font-Roboto flex-col px-10 md:px-80 py-6 ">
+      <h1 className="text-2xl flex justify-center text-white font-bold bg-indigo-900 px-4 py-6">H's BMI & Calculator App</h1>
+      <div className="border-[1px] bg-white mt-8 border-gray-400 rounded-xl  py-16 flex justify-evenly">
+      <Link to="/bmi-calculator" className="bg-blue-500 px-4 py-4 rounded-3xl hover:bg-blue-700">BMI Calculator</Link>
+      <Link to="/normal-calculator" className="bg-blue-500 px-4 py-4 rounded-3xl  hover:bg-blue-700">Math Calculator</Link>
+      </div>
+    </div>
     </div>
   );
 }
