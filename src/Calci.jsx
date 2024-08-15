@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CalciButtons from "./CalciButtons";
+import { evaluate } from "mathjs";
 
 const Calci = () => {
   const [number, setNumber] = useState('');
@@ -13,7 +14,7 @@ const Calci = () => {
       setNumber(number.slice(0,-1))
     }
     else if(data==='='){
-      setNumber((eval(number).toFixed(0).toString()))
+      setNumber((evaluate(number).toFixed(0).toString()))
 
     }
     else {
