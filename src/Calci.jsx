@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import CalciButtons from "./CalciButtons";
 
 const Calci = () => {
   const [number, setNumber] = useState('');
-  const [input, setInput] = useState('');
-      console.log("number:", number)
-
 
   const RecieveData = (data) => {
-
+    console.log("input:", data)
      if(data==='C'){
       setNumber('')
     }
